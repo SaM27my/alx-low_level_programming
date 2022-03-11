@@ -20,12 +20,15 @@ int main(void)
 	while (j <= 57)
 		{
 		if (j > i)
-		{
+			{
 			putchar(i);
 			putchar(j);
-			putchar(',');
-			putchar(' ');
-		}
+			if (i != 56 || j != 57)
+				{
+				putchar(',');
+				putchar(' ');
+				}
+			}
 		j++;
 		}
 	i++;
