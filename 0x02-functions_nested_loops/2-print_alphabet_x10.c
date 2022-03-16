@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* print_alphabet - print a-z X10
+* print_alphabet_x10 - print a-z X10
 *
 * Description: print the alphabet in lower case
 * Return: Always 0
@@ -18,6 +18,9 @@ void print_alphabet_x10(void)
 			_putchar(ch);
 			ch++;
 			}
+
+			ch = 'a';
+
 			_putchar('\n');
 		}
 	}
