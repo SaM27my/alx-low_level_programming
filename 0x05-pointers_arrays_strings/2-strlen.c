@@ -1,8 +1,8 @@
-#include "holberton.h"
+#include "main.h"
 /**
- * _strlen - check the code for Holberton School students.
+ * _strlen - check the code for alx students.
  * @s: declaration of *s and paramters for the function _strlen
- * Return: Always 0.
+ * Return: Always c.
  */
 int _strlen(char *s)
 {
