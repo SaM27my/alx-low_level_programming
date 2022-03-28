@@ -8,16 +8,15 @@
 */
 char *_strpbrk(char *s, char *accept)
 {
-	char *scanp;
-	int c, sc;
-
-	while ((c = *s++) != '\0')
+	while (*s != '\0')
 	{
-		for (scanp = accept; (sc = *scanp) != '\0';)
-		{
-			if (sc == c)
-				return ((char *)(s - 1));
-		}
+	const char *a = accept;
+
+	while (*a != '\0')
+	if (*a++ == *s)
+	return ((char *) s);
+	++s;
 	}
-	return ('\0');
+
+return ('\0');
 }
