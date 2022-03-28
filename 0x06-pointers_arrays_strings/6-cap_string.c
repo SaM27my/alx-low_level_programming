@@ -1,26 +1,31 @@
 #include "main.h"
 /**
- * cap_string - capitalize after separator words
- * @s: character to capitalize after separator
- * Return: return value of upper
+ * cap_string - function that capitalizes all words of a string.
+ * @s: string
+ * Return: output
  */
-
 char *cap_string(char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i] != '\0'; i++)
+	if (s[i] >= 97 && s[i] <= 122)
 	{
-		while (s[i] == ' ' || s[i] == '\t' || s[i] == '\n' || s[i] == ',' ||
-			s[i] == ';' || s[i] == '.' || s[i] == '!' ||
-			 s[i] == '?' || s[i] == '"' || s[i] == '(' ||
-			 s[i] == ')' || s[i] == '{' || s[i] == '}')
+		s[i] -= 32;
+	}
+	while (s[i] != '\0')
+	{
+		if (s[i] == ' ' || s[i] == '\n' || s[i] == '\t'
+		    || s[i] == ',' || s[i] == ';' || s[i] == '.'
+		    || s[i] == '!' || s[i] == '?' || s[i] == '"'
+		    || s[i] == '(' || s[i] == ')' || s[i] == '{'
+		    || s[i] == '}')
 		{
-			if (s[i + 1] >= 'a' && s[i + 1] <= 'z')
+			if (s[i + 1] >= 97 && s[i + 1] <= 122)
 			{
 				s[i + 1] -= 32;
 			}
 		}
+		i++;
 	}
 	return (s);
 }
