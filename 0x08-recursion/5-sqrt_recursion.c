@@ -23,7 +23,7 @@ int _sqrt_recursion(int n)
 * guess - blank guess
 *
 *@n: number
-*@i increment
+*@i: increment
 *Return: -1
 */
 int guess(int n, int i)
